@@ -1,32 +1,36 @@
-# BizForge LLC — UI Pro Website
+# BizForge LLC — Full Corporate v4
 
-Production-style React + TypeScript + Vite website for BizForge LLC.
+Complete React + TypeScript + Supabase + Cloudflare Workers corporate IT-company site.
 
 ## Included
-- Premium responsive homepage
-- BizForge brand logo asset
-- Service catalog with transparent starting prices
-- Pricing, About, Contact, Privacy, Terms and Refund pages
-- Supabase-powered inquiry form
-- Supabase Auth admin login + inquiry dashboard
-- Cloudflare Workers static-assets configuration
-- SPA routing
-- SQL setup for `inquiries`
+- Corporate homepage and navigation
+- 9 detailed IT service categories
+- Service detail pages
+- Solutions / industries
+- Company / About
+- Team (CMS-managed; empty until verified profiles are added)
+- Reviews (CMS-managed; empty until real reviews are added)
+- Capabilities / public experience records
+- Pricing
+- Contact and service-order forms
+- Privacy, Terms, Refund & Cancellation
+- Support page
+- Floating Live Support chat
+- Admin CMS for settings, services, pricing, team, reviews, experience, page content, inquiries and support replies
+- OMS IT neutral implementation/support credit
+- Cloudflare Workers static-assets config
+- Supabase RLS and tokenized support RPCs
 
-## Cloudflare build
-- Build command: `npm run build`
-- Deploy command: `npx wrangler deploy`
-- Root directory: `/`
+## Setup
+1. Run `supabase/FULL_SETUP.sql` in Supabase SQL Editor.
+2. Ensure Cloudflare environment variables:
+   - `VITE_SUPABASE_URL`
+   - `VITE_SUPABASE_ANON_KEY`
+3. Upload this package to GitHub repo root, replacing the prior site files.
+4. Cloudflare build:
+   - Build: `npm run build`
+   - Deploy: `npx wrangler deploy`
+5. Existing Supabase admin user can sign in at `/admin`.
 
-## Required environment variables
-- `VITE_SUPABASE_URL`
-- `VITE_SUPABASE_ANON_KEY`
-
-## Supabase setup
-Run `supabase/setup.sql` in Supabase SQL Editor. Create the admin user in Supabase Authentication manually.
-
-## Important business-data rule
-Before payment-provider submission, replace/add only legal business address, phone, email, registration/jurisdiction and other claims that match verified company records. Do not publish invented certifications, approvals, revenue, client counts or security/compliance claims.
-
-## Pricing
-Published prices are marked as starting prices and are non-binding until scope and commercial terms are confirmed.
+## Evidence / claim policy
+Do not publish invented team profiles, testimonials, client names, revenue, metrics, certifications, approvals, audits or outcomes.
