@@ -1,45 +1,32 @@
-# BizForge LLC Website
+# BizForge LLC — UI Pro Website
 
-Fresh React + TypeScript + Vite website scaffold for an IT / digital services business.
+Production-style React + TypeScript + Vite website for BizForge LLC.
 
 ## Included
-- Home, About, Services, Pricing / Quote, Contact
-- Privacy, Terms, Refund & Cancellation pages
-- Admin login UI with Supabase Auth wiring
-- Cloudflare Pages/Vercel-friendly SPA redirect file
-- Environment variable template
+- Premium responsive homepage
+- BizForge brand logo asset
+- Service catalog with transparent starting prices
+- Pricing, About, Contact, Privacy, Terms and Refund pages
+- Supabase-powered inquiry form
+- Supabase Auth admin login + inquiry dashboard
+- Cloudflare Workers static-assets configuration
+- SPA routing
+- SQL setup for `inquiries`
 
-## Important before production
-Replace all placeholders with verified BizForge LLC legal/business details. Do not claim payment-provider approval, certifications, security/compliance status, customer metrics, or legal registrations unless verified.
-
-## Local run
-```bash
-npm install
-npm run dev
-```
-
-## Supabase
-1. Create a Supabase project.
-2. Copy Project URL and anon/publishable key.
-3. Create `.env` from `.env.example`.
-4. Set `VITE_SUPABASE_URL` and `VITE_SUPABASE_ANON_KEY`.
-5. Create the admin user in Supabase Auth.
-6. Before real admin content management, add roles and Row Level Security. Never put the service-role key in client-side code.
-
-## Cloudflare Pages deployment
-- Connect the GitHub repository.
-- Framework preset: Vite
+## Cloudflare build
 - Build command: `npm run build`
-- Build output directory: `dist`
-- Add environment variables in project settings.
-- Add custom domain after deployment.
+- Deploy command: `npx wrangler deploy`
+- Root directory: `/`
 
-## Vercel deployment
-- Import the GitHub repository.
-- Framework: Vite
-- Build command: `npm run build`
-- Output: `dist`
-- Add the same environment variables.
+## Required environment variables
+- `VITE_SUPABASE_URL`
+- `VITE_SUPABASE_ANON_KEY`
 
-## Payment gateway readiness notes
-A public website can support a payment-provider application, but approval depends on the provider's own onboarding and underwriting requirements. Before applying, publish accurate legal name, business address/contact information, service descriptions, pricing/quote process, privacy policy, terms, cancellation/refund policy, and a working domain/email. Ensure everything matches submitted LLC/payment account records.
+## Supabase setup
+Run `supabase/setup.sql` in Supabase SQL Editor. Create the admin user in Supabase Authentication manually.
+
+## Important business-data rule
+Before payment-provider submission, replace/add only legal business address, phone, email, registration/jurisdiction and other claims that match verified company records. Do not publish invented certifications, approvals, revenue, client counts or security/compliance claims.
+
+## Pricing
+Published prices are marked as starting prices and are non-binding until scope and commercial terms are confirmed.

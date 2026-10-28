@@ -1,1 +1,13 @@
-export default function About(){return <section className="section wrap"><h1>About BizForge LLC</h1><p className="lead">BizForge LLC is a technology services business focused on web development, software, automation, AI integration, cloud setup and ongoing technical support.</p><div className="card"><h2>Business information</h2><p>Before publishing, replace the placeholders below with the exact legal and contact information that matches your LLC records and payment-provider application.</p><ul><li>Legal business name: BizForge LLC</li><li>Business address: [ADD VERIFIED LLC ADDRESS]</li><li>Business email: [ADD BUSINESS EMAIL]</li><li>Business phone: [ADD BUSINESS PHONE]</li><li>Registration / jurisdiction details: [ADD ONLY IF VERIFIED]</li></ul></div></section>}
+import { Link } from 'react-router-dom';
+export default function About(){
+  return <section className="pageHero"><div className="wrap aboutGrid">
+    <div><span className="kicker">ABOUT</span><h1>BizForge LLC</h1><p className="lead">A technology services business focused on web development, custom software, AI integration, automation, deployment and ongoing technical support.</p>
+      <p>Our operating model is straightforward: understand the requirement, define the scope, agree commercial terms, deliver against milestones, review the result and hand over documented work.</p>
+      <Link className="btn primary" to="/contact">Discuss a project</Link>
+    </div>
+    <div className="infoPanel"><h2>Business information</h2>
+      <p>Before payment-provider review, publish only details that exactly match verified company records.</p>
+      <dl><div><dt>Legal business name</dt><dd>BizForge LLC</dd></div><div><dt>Business model</dt><dd>Technology services</dd></div><div><dt>Delivery model</dt><dd>Project-based and recurring support</dd></div><div><dt>Contact</dt><dd>Secure inquiry form</dd></div></dl>
+    </div>
+  </div></section>;
+}

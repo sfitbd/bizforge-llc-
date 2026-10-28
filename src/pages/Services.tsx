@@ -1,2 +1,16 @@
+import { Link } from 'react-router-dom';
 import { services } from '../data/services';
-export default function Services(){return <section className="section wrap"><h1>IT & Digital Services</h1><p className="lead">BizForge LLC provides project-based and recurring technology services. Final scope and pricing are confirmed before work begins.</p><div className="grid">{services.map(s=><article className="card" key={s.title}><h2>{s.title}</h2><p>{s.description}</p><p className="muted">Available as custom scoped engagements.</p></article>)}</div></section>}
+export default function Services(){
+  return <section className="pageHero">
+    <div className="wrap">
+      <span className="kicker">SERVICES</span><h1>IT & digital services built for real operations.</h1>
+      <p className="lead">Choose a starting service or request a custom scope. Published prices are starting points, not binding quotes.</p>
+      <div className="serviceGrid full">{services.map(s=><article className="serviceCard" key={s.title}>
+        <div className="serviceIcon">{s.icon}</div><h2>{s.title}</h2><p>{s.description}</p>
+        <ul>{s.bullets.map(b=><li key={b}>✓ {b}</li>)}</ul>
+        <div className="priceLine"><span>Starting from</span><strong>{s.starting}</strong></div>
+        <Link className="textLink" to="/contact">Request scope →</Link>
+      </article>)}</div>
+    </div>
+  </section>;
+}
