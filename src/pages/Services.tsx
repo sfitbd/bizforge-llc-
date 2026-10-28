@@ -1,0 +1,2 @@
+import { services } from '../data/services';
+export default function Services(){return <section className="section wrap"><h1>IT & Digital Services</h1><p className="lead">BizForge LLC provides project-based and recurring technology services. Final scope and pricing are confirmed before work begins.</p><div className="grid">{services.map(s=><article className="card" key={s.title}><h2>{s.title}</h2><p>{s.description}</p><p className="muted">Available as custom scoped engagements.</p></article>)}</div></section>}
